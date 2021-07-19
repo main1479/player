@@ -1,0 +1,131 @@
+.slider {
+  .owl-dots {
+    display: none;
+  }
+  .owl-nav {
+    display: none;
+    // position: absolute;
+    // top: -5rem;
+    // right: 0;
+
+   /*
+    .owl-next,
+    .owl-prev {
+      outline: 0;
+      span {
+        font-size: 5rem;
+        line-height: 0;
+        margin: 0.5rem;
+        color: #747474;
+      }
+      &:hover {
+        background: none;
+        span {
+          color: #b4b4b4;
+        }
+      }
+    } */
+  }
+
+  &3 {
+    .img {
+      width: 21rem;
+      height: 21rem;
+      position: relative;
+      // svg {
+      //   width: 70%;
+      //   height: 70%;
+      //   position: absolute;
+      //   top: 50%;
+      //   left: 50%;
+      //   transform: translate(-50%, -50%);
+      //   z-index: 3;
+      //   fill: #fff;
+      // }
+
+      @media only screen and (max-width: $laptop-port) {
+        width: 13rem;
+        height: 13rem;
+      }
+      @media only screen and (max-width: $tab-port) {
+        width: 11rem;
+        height: 11rem;
+      }
+    }
+
+    .slide__item {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.slider3 {
+  @media only screen and (max-width: $laptop-port) {
+    display: none !important;
+  }
+}
+.slider2 {
+  @media only screen and (max-width: $tab-port) {
+    display: none !important;
+  }
+}
+
+.top__text{
+  background-color: #F9233D;
+  padding: 1.2rem 0;
+  text-align: center;
+  border-radius: 2rem;
+  color: #fff;
+}
+
+.main-content {
+  margin: 0;
+  margin-left: 300px;
+  // width: 83%;
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+  // max-width: 1488px;
+  // width: 100%;
+  // margin: 0 auto;
+  margin-bottom: 15rem !important;
+  // overflow-y: scroll;
+  @media only screen and (max-width: 1500px) {
+    margin-left: 200px;
+  }
+  @media only screen and (max-width: 1350px) {
+    margin: 0 auto;
+    margin-top: 13rem;
+    width: 63%;
+    max-width: 117rem;
+  }
+}
+
+.artist__name{
+  font-size: 1.3rem;
+  color: #000;
+  opacity: .5;
+  margin-bottom: 1rem;
+}
+
+.song__title-1{
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.song__title-2{
+  font-size: 2.2rem;
+  opacity: .6;
+  margin-bottom: 2rem;
+}
+
+.slide__item--1{
+  border-top: 1px solid #d6d6d6c7;
+  padding: 2rem 0;
+}
+
+.slider1{
+  border-bottom: 1px solid #d6d6d6c7;
+}
