@@ -34,11 +34,14 @@ body {
 	color: #fff;
 }
 
+.main-content {
+	max-width: 140rem;
+}
+
 figure,
 p {
 	margin-bottom: 0;
 }
-
 
 .laptop-port-show {
 	display: none;
