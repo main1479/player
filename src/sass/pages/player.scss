@@ -1,9 +1,9 @@
 .player {
   background: linear-gradient(to right, #88562d, #b18660);
-//   height: 100vh;
-    // min-height: 500px;
-    // height: 100vh;
-    max-height: 1200px;
+  //   height: 100vh;
+  // min-height: 500px;
+  // height: 100vh;
+  max-height: 1200px;
   width: 100%;
 
   &__content {
@@ -107,30 +107,65 @@
     display: inline-block;
   }
 
-  &__icon{
+  &__icon {
     color: #fff;
     margin-bottom: 2rem;
     font-size: 6rem;
   }
 
-  &__progress--container{
+  &__progress--container {
     // border: 1px solid red;
     display: grid;
     grid-template-columns: min-content 1fr min-content;
     align-items: center;
   }
 
-    .progress{
-        // width: 100%;
+  .progress {
+    // width: 100%;
   }
 
   &__prev,
-  &__next{
-    color: #fff;
-    font-size: 1.8rem;
+  &__next {
+    svg{
+      height: 2.5rem;
+      width: 2.5rem;
+      fill: #fff;
+    }
   }
 
-  &__next{
+  &__next {
+  }
 
+  &__footer {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    padding: 6rem;
+
+    &--left {
+      svg {
+        fill: #fff;
+      }
+    }
+
+    &--right {
+      justify-self: end;
+
+      .icon-message {
+        height: 3.5rem;
+        width: 3.5rem;
+        fill: #79593c;
+        margin-right: 4rem;
+      }
+
+      .icon-list {
+        fill: #fff;
+      }
+    }
+
+    svg {
+      height: 3rem;
+      width: 3rem;
+      cursor: pointer;
+    }
   }
 }

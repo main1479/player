@@ -1,0 +1,260 @@
+.dark {
+  .sidebar {
+    background-color: #cecece;
+    border-right: 1px solid #e7e7e7;
+
+    svg {
+      fill: #80827e;
+    }
+  }
+
+  .allplaylist {
+    display: block;
+  }
+
+  .sidebar .nav__link.active,
+  .sidebar .nav__link:hover {
+    opacity: 1;
+    background-color: #707070;
+    color: #fff;
+  }
+
+  .sidebar__head {
+    color: #80827e;
+
+    .sidebar__head--left {
+      svg {
+        fill: #80827e;
+      }
+    }
+  }
+
+  .allplaylist__settings {
+    display: block;
+  }
+
+  .new-playlist{
+    display: block;
+  }
+}
+
+// .overlay{
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   height: 100%;
+//   width: 100%;
+//   background-color: red;
+//   z-index: 12;
+// }
+
+.allplaylist {
+  position: fixed;
+  top: 15rem;
+  left: 30rem;
+  z-index: 11;
+  display: none;
+  transition: all 0.5s;
+
+  &__body {
+    display: flex;
+    grid-gap: 4rem;
+  }
+
+  &__items {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  &__box {
+    background-color: #eee;
+    display: inline-block;
+    padding: 16rem;
+    border-radius: 1rem;
+
+    svg {
+      height: 6rem;
+      width: 6rem;
+      fill: $color-primary;
+    }
+  }
+}
+
+.allplaylist__settings {
+  background-color: #fcfcfc;
+  height: auto;
+  width: 30rem;
+  padding: 1.5rem 0;
+  border-radius: 1rem;
+  position: fixed;
+  top: 18rem;
+  left: 75rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  display: none;
+}
+
+.allplaylist__list {
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 1.5rem;
+
+  &--item {
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-dark;
+      padding-bottom: 1.5rem;
+      transition: all 0.3s;
+    }
+
+    svg {
+      height: 2rem;
+      width: 2rem;
+      fill: #000;
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary;
+      svg {
+        fill: $color-primary;
+      }
+    }
+  }
+
+  .line-break {
+    border-bottom: 8px solid $color-dark;
+  }
+}
+
+.settings__name {
+}
+
+// new playlist page
+.new-playlist {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  max-height: 84rem;
+  height: 80%;
+  width: 80rem;
+  position: fixed;
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  padding: 3rem;
+  z-index: 12;
+  display: none;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: $color-primary;
+      text-transform: capitalize;
+      transition: all .3s;
+
+      &:hover, &:active{
+        color: #000;
+      }
+    }
+
+    .btn-done {
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 33rem 1fr;
+    grid-column-gap: 4rem;
+    align-items: center;
+    border-bottom: 1px solid $color-dark;
+    padding-bottom: 4rem;
+  }
+
+  &__left {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    height: 33rem;
+    width: 100%;
+    background-color: #eee;
+    position: relative;
+    svg{
+      height: 3rem;
+      width: 3rem;
+    }
+    .icon-playlist{
+      height: 15rem;
+      width: 15rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.5;
+      fill: rgb(153, 153, 153);
+    }
+
+    .icon-camera{
+      // height: 5rem;
+      // width: 5rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-dark;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      padding: 3.5rem;
+      border-radius: 50%;
+    }
+  }
+
+  // &__icon{
+  //   height: ;
+  // }
+
+  &__right {
+    
+    form{
+
+    }
+
+    .heading-2{
+      font-size: 3rem;
+    }
+
+    input{
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid $color-dark;
+    }
+  }
+
+  &__bottom{
+    display: flex;
+    grid-column-gap: 2rem;
+    align-items: center;
+    border-bottom: 1px solid $color-dark;
+    padding-bottom: 2rem;
+
+    .icon{
+      background-color: green;
+      padding: 1rem  1.5rem;
+      border-radius: 50%;
+    }
+    svg{
+      height: 2rem;
+      width: 2rem;
+      fill: #fff;
+    }
+  }
+}

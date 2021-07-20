@@ -11,6 +11,7 @@
 @import "./components/playing.scss";
 @import "./components/songList.scss";
 @import "./components/buttons.scss";
+@import "./components/dark.scss";
 
 // ===============================
 // pages
@@ -18,8 +19,12 @@
 @import "./pages/homepage.scss";
 @import "./pages/radio.scss";
 // @import './pages/playlist.scss';
-// @import './pages/featured.scss';
+@import './pages/featured.scss';
 @import './pages/artist.scss';
+@import './pages/playlist.scss';
+@import './pages/page-10.scss';
+@import './pages/page-11.scss';
+@import './pages/page-12.scss';
 // @import './pages/fullpage-player.scss';
 // @import './pages/playlist-inside.scss';
 // @import './pages/playlist-creation.scss';

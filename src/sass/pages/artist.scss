@@ -40,83 +40,121 @@
         // min-width: 14rem;
         // min-height: 14rem;
         margin-top: 5rem;
-
-        
       }
-	  img {
-		height: 100%;
-		width: 100%;
-		object-fit: cover;
-	  }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
     }
 
-	&__name{
-		font-size: 3rem;
-		font-weight: 600;
-	}
+    &__name {
+      font-size: 3rem;
+      font-weight: 600;
+    }
 
-	&__title{
-		font-size: 3rem;
-		font-weight: 600;
-		color: #FA233B;
-	}
+    &__title {
+      font-size: 3rem;
+      font-weight: 600;
+      color: #fa233b;
+    }
 
-	&__date{
-		font-size: 1.2rem;
-		text-transform: uppercase;
-	}
+    &__date {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
 
-	&__buttons{
-		.btn{
-			background-color: #EEEEEF;
-			color: #FA233B;
-			padding: 1rem 5.5rem;
-			border-radius: 1rem;
-			transition: all .3s;
+    &__buttons {
+      @media only screen and (max-width: $laptop-land) {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 2rem;
+      }
+      .btn {
+        background-color: #eeeeef;
+        color: #fa233b;
+        padding: 1rem 5.5rem;
+        border-radius: 1rem;
+        transition: all 0.3s;
 
-			&:hover{
-				background-color: #cfcfcf;
-			}
+        @media only screen and (max-width: $laptop-land) {
+          padding: 1rem 4.5rem;
+        }
 
-			&__play{
-				margin: 0;
-			}
-		}
+        &:hover {
+          background-color: #cfcfcf;
+        }
 
-		svg{
-			height: 2rem;
-			width: 2rem;
-			fill: #FA233B;
-			margin-right: 1rem;
-		}
-	}
+        &__play {
+          margin: 0;
+        }
+      }
 
-	&__details{
-		position: absolute;
-		bottom: 0;
-		left: 0;
-	}
+      svg {
+        height: 2rem;
+        width: 2rem;
+        fill: #fa233b;
+        margin-right: 1rem;
+      }
+    }
 
-	&__head{
-		display: flex;
-		justify-content: space-between;
+    &__details {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
 
-		svg{
-			height: 2rem;
-			width: 2rem;
-		}
-	}
+    &__head {
+      display: flex;
+      justify-content: space-between;
 
-	&__dots{
-		background-color: #d4d4d4;
-		padding: .5rem 1rem;
-		border-radius: 50%;
-		cursor: pointer;
-		transition: all .3s;
+      svg {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
 
-		&:hover{
-			background-color: #ececec;
-		}
-	}
+    &__back--button {
+      border: none;
+      outline: none;
+      background: transparent;
+      transition: all 0.3s;
+
+      &:hover,
+      &:active svg {
+        fill: #fa233b;
+      }
+    }
+
+    &__dot-button {
+      background-color: #d4d4d4;
+      padding: 0.5rem 1rem;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: #ececec;
+      }
+    }
+
+    &__right {
+      display: flex;
+      // grid-column-gap: 2rem;
+      align-items: center;
+      margin-left: auto;
+    }
+
+    &__g {
+      margin-right: 15rem;
+    }
+    &__time {
+      margin-right: 8rem;
+    }
   }
+}
+.song__list {
+  border-top: 1px solid #dadada;
 }

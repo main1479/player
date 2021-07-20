@@ -2,14 +2,21 @@
 
   .slide__item{
     .img{
-      max-height: 32rem;
+      // max-height: 28rem;
+      width: 100%;
+      height: 100%;
       // height: 12rem;
       img{
-        height: 15rem;
+        width: 100%;
+        height: 17rem;
+          object-fit: cover;
+          object-position: top center;
       }
     }
   }
   .slider2 {
+    border-bottom: 1px solid #c9c9c9d2;
+    padding-bottom: 3rem;
     svg {
       height: 2.5rem;
       width: 2.5rem;
@@ -75,8 +82,6 @@
   }
   .text__bottom {
     color: #fa233b;
-  }
-  .slider2 {
-    border-bottom: 1px solid #c9c9c9d2;
+    margin: 2rem 0 0 1.5rem;
   }
 }

@@ -1,0 +1,84 @@
+.music-list {
+  max-height: 97rem;
+  max-width: 97rem;
+  height: 75rem;
+  width: 97rem;
+  position: fixed;
+  top: 3rem;
+  left: 20%;
+  background-color: #fff;
+  z-index: 12;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 2rem;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    //   padding: 0 2rem;
+    height: 10rem;
+    // border: 1px solid red;
+    align-items: center;
+  }
+
+  button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    text-transform: capitalize;
+    height: 0;
+    color: $color-primary;
+    transition: all 0.3s;
+
+    &:hover,
+    &:active {
+      color: #000;
+    }
+  }
+
+  .heading-5 {
+    align-self: flex-start;
+    margin-top: 1rem;
+  }
+
+  .btn-cencel {
+    color: $color-primary;
+  }
+
+  .music-list__bottom {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    // border: 1px solid red;
+  }
+
+  .music-list__icon {
+    margin-right: 2rem;
+    svg {
+      height: 3rem;
+      width: 3rem;
+      fill: $color-primary;
+    }
+  }
+
+  .music-list__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $color-dark;
+    border-bottom: 1px solid $color-dark;
+    padding: 2rem 0;
+    // grid-template-columns: repeat(2, 1fr);
+    // border: 1px solid red;
+
+    .heading-3 {
+      font-size: 2.5rem;
+    //   align-self: start;
+    }
+
+    svg {
+      height: 2rem;
+      width: 2rem;
+    //   align-self: end;
+    }
+  }
+}

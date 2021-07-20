@@ -29,8 +29,8 @@
 
   &3 {
     .img {
-      width: 21rem;
-      height: 21rem;
+      // width: 21rem;
+      // object-fit: cover;
       position: relative;
       // svg {
       //   width: 70%;
@@ -43,6 +43,8 @@
       //   fill: #fff;
       // }
 
+
+
       @media only screen and (max-width: $laptop-port) {
         width: 13rem;
         height: 13rem;
@@ -52,11 +54,41 @@
         height: 11rem;
       }
     }
+  }
+}
 
-    .slide__item {
-      img {
-        width: 100%;
-      }
+.home-page{
+  .artist__name{
+    font-size: 1.3rem;
+    color: #000;
+    opacity: .5;
+    margin-bottom: 1rem;
+  }
+  
+  .song__title-1{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .song__title-2{
+    font-size: 2.2rem;
+    opacity: .6;
+    margin-bottom: 2rem;
+  }
+  
+  .slide__item--1{
+    border-top: 1px solid #d6d6d6c7;
+    padding: 2rem 0;
+  }
+  
+  .slider1{
+    border-bottom: 1px solid #d6d6d6c7;
+  }
+
+  .slide__item {
+    .img{
+      max-height: 36rem;
+      height: 100%;
     }
   }
 }
@@ -83,17 +115,10 @@
 .main-content {
   margin: 0;
   margin-left: 320px;
-  // width: 83%;
-  // position: absolute;
-  // top: 0;
-  // right: 0;
-  // max-width: 1488px;
-  // width: 100%;
-  // margin: 0 auto;
   margin-bottom: 15rem !important;
   // overflow-y: scroll;
   @media only screen and (max-width: 1500px) {
-    margin-left: 200px;
+    margin-left: 280px;
   }
   @media only screen and (max-width: 1350px) {
     margin: 0 auto;
@@ -101,31 +126,12 @@
     width: 63%;
     max-width: 117rem;
   }
+
+  @media only screen and (max-width: 1350px) {
+    margin: 0 auto;
+    // margin-top: 13rem;
+    width: 85%;
+    max-width: 117rem;
+  }
 }
 
-.artist__name{
-  font-size: 1.3rem;
-  color: #000;
-  opacity: .5;
-  margin-bottom: 1rem;
-}
-
-.song__title-1{
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-}
-
-.song__title-2{
-  font-size: 2.2rem;
-  opacity: .6;
-  margin-bottom: 2rem;
-}
-
-.slide__item--1{
-  border-top: 1px solid #d6d6d6c7;
-  padding: 2rem 0;
-}
-
-.slider1{
-  border-bottom: 1px solid #d6d6d6c7;
-}
