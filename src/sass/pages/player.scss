@@ -1,182 +1,196 @@
 .player {
-  background: linear-gradient(to right, #88562d, #b18660);
-  // max-height: 1200px;
-  // width: 100%;
+	background: linear-gradient(to right, #88562d, #b18660);
 
-  &__content {
-    max-width: 90rem;
-    margin: 0 auto;
-    text-align: center;
-    padding: 5rem 0;
-    color: #88562d;
-  }
+	@media only screen and (max-width: $tab-port) {
+		max-height: 1200px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		min-height: 100vh;
 
-  &__image {
-    height: 45rem;
-    width: 45rem;
-    margin: 0 auto 5rem auto;
+		.player-page-wrapper {
+			width: 95%;
+			max-width: 90rem;
+		}
+	}
+	&__content {
+		width: 100%;
+		max-width: 90rem;
+		margin: 0 auto;
+		text-align: center;
+		// padding: 5rem 0;
+		padding-top: 4rem;
+		color: #88562d;
+	}
 
-    @media only screen and (max-width: $mbl-port) {
-      height: 30rem;
-      width: 30rem;
-    }
+	&__image {
+		height: 45rem;
+		width: 100%;
+		max-width: 45rem;
+		margin: 0 auto 5rem auto;
 
-    @media only screen and (max-width: $mbl-port) {
-      height: 25rem;
-      width: 25rem;
-    }
+		// @media only screen and (max-width: $mbl-port) {
+		// 	height: 30rem;
+		// 	width: 30rem;
+		// }
 
-    img {
-      height: 100%;
-      width: 100%;
-    }
-  }
+		// @media only screen and (max-width: $mbl-port) {
+		// 	height: 25rem;
+		// 	width: 25rem;
+		// }
 
-  &__details {
-    display: grid;
-    grid-template-columns: 1fr min-content 1fr;
-    color: #fff;
-    margin-bottom: 5rem;
-    align-items: flex-end;
-    padding: 0 5rem;
-    grid-column-gap: 2rem;
-    @media only screen and (max-width: $mbl-land) {
-      grid-template-columns: 1fr min-content;
-      align-items: center;
-    }
-  }
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
 
-  &__left {
-    // border-bottom: 0.5rem solid red;
-    // border-style: solid;
-    // border-width: 5px;
-    // border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
-    justify-self: flex-start;
-    width: 100%;
-    text-align: left;
+	&__details {
+		display: grid;
+		grid-template-columns: 1fr min-content 1fr;
+		color: #fff;
+		margin-bottom: 5rem;
+		align-items: flex-end;
+		padding: 0 5rem;
+		grid-column-gap: 2rem;
+		@media only screen and (max-width: $mbl-land) {
+			grid-template-columns: 1fr min-content;
+			align-items: center;
+		}
+	}
 
-    &::after {
-      content: "";
-      display: block;
-      height: 5px;
-      width: 100%;
-      background-image: linear-gradient(to right, #b88454, transparent);
-    }
-  }
+	&__left {
+		// border-bottom: 0.5rem solid red;
+		// border-style: solid;
+		// border-width: 5px;
+		// border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
+		justify-self: flex-start;
+		width: 100%;
+		text-align: left;
 
-  &__song--name {
-    color: #fff;
-    margin-bottom: 1.2rem;
-  }
+		&::after {
+			content: '';
+			display: block;
+			height: 5px;
+			width: 100%;
+			background-image: linear-gradient(to right, #b88454, transparent);
+		}
+	}
 
-  &__song--artist {
-    color: #aa7446;
-  }
+	&__song--name {
+		color: #fff;
+		margin-bottom: 1.2rem;
+	}
 
-  &__center {
-    .heading-5 {
-      margin-bottom: -0.5rem;
-    }
-  }
+	&__song--artist {
+		color: #aa7446;
+	}
 
-  &__right {
-    width: 100%;
-    text-align: right;
-    @media only screen and (max-width: $mbl-land) {
-      display: none;
-    }
+	&__center {
+		.heading-5 {
+			margin-bottom: -0.5rem;
+		}
+	}
 
-    &::after {
-      content: "";
-      display: block;
-      height: 5px;
-      width: 100%;
-      background-image: linear-gradient(to left, #b88454, transparent);
-    }
-  }
+	&__right {
+		width: 100%;
+		text-align: right;
+		@media only screen and (max-width: $mbl-land) {
+			display: none;
+		}
 
-  &__dots {
-    display: inline-block;
-    background-color: #aa7446;
-    border-radius: 50%;
-    padding: 1.6rem 1rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    margin-bottom: 2rem;
+		&::after {
+			content: '';
+			display: block;
+			height: 5px;
+			width: 100%;
+			background-image: linear-gradient(to left, #b88454, transparent);
+		}
+	}
 
-    &:hover {
-      background-color: #c07b3e;
-    }
-  }
+	&__dots {
+		display: inline-block;
+		background-color: #aa7446;
+		border-radius: 50%;
+		padding: 1.6rem 1rem;
+		cursor: pointer;
+		transition: all 0.3s;
+		margin-bottom: 2rem;
 
-  &__dot {
-    height: 1rem;
-    width: 1rem;
-    background: #fff;
-    border-radius: 50%;
-    border: none;
-    display: inline-block;
-  }
+		&:hover {
+			background-color: #c07b3e;
+		}
+	}
 
-  &__icon {
-    color: #fff;
-    margin-bottom: 2rem;
-    font-size: 6rem;
-  }
+	&__dot {
+		height: 1rem;
+		width: 1rem;
+		background: #fff;
+		border-radius: 50%;
+		border: none;
+		display: inline-block;
+	}
 
-  &__progress--container {
-    display: grid;
-    grid-template-columns: min-content 1fr min-content;
-    align-items: center;
+	&__icon {
+		color: #fff;
+		margin-bottom: 2rem;
+		font-size: 6rem;
+	}
 
-    @media only screen and (max-width: $laptop-port) {
-      padding: 0 2rem;
-    }
-  }
+	&__progress--container {
+		display: grid;
+		grid-template-columns: min-content 1fr min-content;
+		align-items: center;
 
-  &__prev,
-  &__next {
-    svg {
-      height: 2.5rem;
-      width: 2.5rem;
-      fill: #fff;
-    }
-  }
+		@media only screen and (max-width: $laptop-port) {
+			padding: 0 2rem;
+		}
+	}
 
-  &__footer {
-    display: grid;
-    grid-template-columns: min-content 1fr;
-    padding: 6rem;
+	&__prev,
+	&__next {
+		svg {
+			height: 2.5rem;
+			width: 2.5rem;
+			fill: #fff;
+		}
+	}
 
-    @media only screen and (max-width: $laptop-land) {
-      padding: 4rem 2rem;
-    }
+	&__footer {
+		display: grid;
+		grid-template-columns: min-content 1fr;
+		padding: 3rem;
 
-    &--left {
-      svg {
-        fill: #fff;
-      }
-    }
+		@media only screen and (max-width: $laptop-land) {
+			padding: 4rem 2rem;
+		}
 
-    &--right {
-      justify-self: end;
+		&--left {
+			svg {
+				fill: #fff;
+			}
+		}
 
-      .icon-message {
-        height: 3.5rem;
-        width: 3.5rem;
-        fill: #79593c;
-        margin-right: 4rem;
-      }
+		&--right {
+			justify-self: end;
 
-      .icon-list {
-        fill: #fff;
-      }
-    }
+			.icon-message {
+				height: 3.5rem;
+				width: 3.5rem;
+				fill: #79593c;
+				margin-right: 4rem;
+			}
 
-    svg {
-      height: 3rem;
-      width: 3rem;
-      cursor: pointer;
-    }
-  }
+			.icon-list {
+				fill: #fff;
+			}
+		}
+
+		svg {
+			height: 3rem;
+			width: 3rem;
+			cursor: pointer;
+		}
+	}
 }

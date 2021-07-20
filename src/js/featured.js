@@ -1,30 +1,30 @@
-let slider = document.getElementById("slider");
-let fill = document.querySelector(".bar .fill");
+let slider = document.getElementById('slider');
+let fill = document.querySelector('.bar .fill');
 function fillw() {
-  fill.style.width = slider.value + "%";
+	fill.style.width = slider.value + '%';
 }
-slider.addEventListener("input", fillw);
+slider.addEventListener('input', fillw);
 
 // =========================================
 // sliders
-$(".featured-slider1").owlCarousel({
-  loop: false,
-  margin: 10,
-  nav: true,
-  responsive: {
-    0: {
-      items: 3,
-      nav: false,
-    },
-    600: {
-      items: 4,
-      nav: false,
-    },
-    1000: {
-      items: 6,
-      nav: true,
-    },
-  },
+$('.featured-slider1').owlCarousel({
+	loop: false,
+	margin: 10,
+	nav: true,
+	responsive: {
+		0: {
+			items: 3,
+			nav: false,
+		},
+		600: {
+			items: 4,
+			nav: false,
+		},
+		1000: {
+			items: 6,
+			nav: true,
+		},
+	},
 });
 
 /*
@@ -89,18 +89,17 @@ $(".featured-slider4").owlCarousel({
 });
 */
 
-
 // create dropdown
 
-const dropBtn = document.querySelectorAll(".drop__link");
+const dropBtn = document.querySelectorAll('.drop__link');
 // const dropItem = document.querySelector()
 dropBtn.forEach((el) => {
-  el.addEventListener("click", () => {
-    const targetEl = el.closest(".drop__item");
-    targetEl.classList.toggle("show-drop");
-  });
+	el.addEventListener('click', (e) => {
+		e.preventDefault();
+		const targetEl = el.closest('.drop__item');
+		targetEl.classList.toggle('show-drop');
+	});
 });
-
 /*
 // show playlis and settings
 const allplaylist = document.querySelector(".dropdown__item--1");
@@ -132,9 +131,8 @@ function showDark(){
 
 // sidebar show and hide
 
-function sidebar (){
-  const mobileMenu = document.querySelector('body')
-  mobileMenu.classList.toggle('show-nav')
-  console.log(mobileMenu);
+function sidebar() {
+	const mobileMenu = document.querySelector('body');
+	mobileMenu.classList.toggle('show-nav');
+	console.log(mobileMenu);
 }
-
