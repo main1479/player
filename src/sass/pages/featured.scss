@@ -57,7 +57,11 @@
 	width: 100%;
 
   @media only screen and (max-width: $tab-port){
-    // height: 15rem;
+    height: 18rem;
+  }
+
+  @media only screen and (max-width: $mbl-port){
+    height: 14rem;
   }
 
 	img{
@@ -65,5 +69,18 @@
 		width: 100%;
 		object-fit: cover;
 	}
+  }
+
+  .main-content {
+    // margin: 0;
+    // margin-left: 320px;
+    // margin-bottom: 15rem !important;
+    
+    @media only screen and (max-width: 1500px) {
+      // margin: 0 auto;
+      margin-top: 5rem;
+      // width: 63%;
+      // max-width: 114rem;
+    }
   }
 }

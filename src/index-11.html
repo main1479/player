@@ -18,6 +18,25 @@
 </head>
 
 <body class="playlist-page">
+
+    <!-- ========================================== -->
+    <!-- =============== mobie menu =============== -->
+    <!-- ========================================== -->
+    <div class="mobile-menu">
+        <div class="start-sidebar bar" onclick="sidebar()">
+            <svg>
+                <use xlink:href="./img/icons.svg#icon-bars"></use>
+            </svg>
+        </div>
+
+        <div class="close-sidebar bar" onclick="sidebar()">
+            <svg>
+                <use xlink:href="./img/icons.svg#icon-close"></use>
+            </svg>
+        </div>
+    </div>
+
+
     <!-- ========================================== -->
     <!-- =============== sidebar ================== -->
     <!-- ========================================== -->
@@ -173,72 +192,72 @@
         </div>
     </div>
 
-        .
+    .
 
-        <!-- ====================================== -->
-        <!-- ========== currently playing ========= -->
-        <!-- ====================================== -->
-        <div class="playing-wrapper">
-            <div class="container-flued">
-                <div class="row align-items-center">
-                    <div class="col-2 playing-song-col">
-                        <div class="playing__song">
-                            <figure class="playing__song-img">
-                                <img src="./img/playing-song.png" alt="IMG" />
-                            </figure>
-                            <div class="playing__song-info">
-                                <h3 class="heading song__title">not playing</h3>
-                            </div>
+    <!-- ====================================== -->
+    <!-- ========== currently playing ========= -->
+    <!-- ====================================== -->
+    <div class="playing-wrapper">
+        <div class="container-flued">
+            <div class="row align-items-center">
+                <div class="col-2 playing-song-col">
+                    <div class="playing__song">
+                        <figure class="playing__song-img">
+                            <img src="./img/playing-song.png" alt="IMG" />
+                        </figure>
+                        <div class="playing__song-info">
+                            <h3 class="heading song__title">not playing</h3>
                         </div>
                     </div>
-                    <div class="col-8 playing-control-col">
-                        <div class="progress">
-                            <div class="bar">
-                                <div class="fill"></div>
-                            </div>
-                            <input type="range" min="0" max="100" value="0" step="1" id="slider" />
+                </div>
+                <div class="col-8 playing-control-col">
+                    <div class="progress">
+                        <div class="bar">
+                            <div class="fill"></div>
                         </div>
+                        <input type="range" min="0" max="100" value="0" step="1" id="slider" />
                     </div>
+                </div>
 
-                    <div class="col-2 playing-control-col">
-                        <div class="playing__control">
-                            <button class="btn btn__prev btn__control">
-                                <svg>
-                                    <use xlink:href="./img/icons.svg#icon-backward2"></use>
-                                </svg>
-                            </button>
-                            <button class="btn btn__play btn__control">
-                                <svg>
-                                    <use xlink:href="./img/icons.svg#icon-play3"></use>
-                                </svg>
-                            </button>
-                            <button class="btn btn__next btn__control">
-                                <svg>
-                                    <use xlink:href="./img/icons.svg#icon-forward3"></use>
-                                </svg>
-                            </button>
-                        </div>
+                <div class="col-2 playing-control-col">
+                    <div class="playing__control">
+                        <button class="btn btn__prev btn__control">
+                            <svg>
+                                <use xlink:href="./img/icons.svg#icon-backward2"></use>
+                            </svg>
+                        </button>
+                        <button class="btn btn__play btn__control">
+                            <svg>
+                                <use xlink:href="./img/icons.svg#icon-play3"></use>
+                            </svg>
+                        </button>
+                        <button class="btn btn__next btn__control">
+                            <svg>
+                                <use xlink:href="./img/icons.svg#icon-forward3"></use>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- 
+    <!-- 
 	col-xl-3 col-lg-4 col-md-6 
 	col-lg-7 col-md-6 
 	col-lg-7 col-md-6 
  -->
 
-        <!-- bootstrap files -->
-        <script src="js/jquery.js"></script>
-        <script src="js/popper.js"></script>
-        <script src="js/bootstrap.js"></script>
+    <!-- bootstrap files -->
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
 
-        <!-- carousel -->
-        <script src="js/owl.carousel.min.js"></script>
+    <!-- carousel -->
+    <script src="js/owl.carousel.min.js"></script>
 
-        <!-- Main js file -->
-        <script src="js/index-11.js"></script>
+    <!-- Main js file -->
+    <script src="js/index-11.js"></script>
 </body>
 
 </html>

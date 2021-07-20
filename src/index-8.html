@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="home-page">
+<body class="playlist-page">
 
 	<!-- ========================================== -->
 	<!-- =============== mobie menu =============== -->
@@ -39,7 +39,6 @@
 	<!-- ========================================== -->
 	<!-- =============== sidebar ================== -->
 	<!-- ========================================== -->
-
 	<div class="sidebar">
 		<div class="sidebar__head">
 			<div class="sidebar__head--left">
@@ -110,13 +109,13 @@
 						</svg>
 					</a>
 					<div class="dropdown mt-1">
-						<a href="#" class="dropdown__item black all-playlist">
+						<a href="#" class="dropdown__item black dropdown__item--1">
 							<svg>
 								<use xlink:href="./img/icons.svg#icon-playlist"></use>
 							</svg>
 							all playlists
 						</a>
-						<a href="#" class="dropdown__item black">
+						<a href="#" class="dropdown__item dropdown__item--2 black">
 							<svg>
 								<use xlink:href="./img/icons.svg#icon-plus"></use>
 							</svg>
@@ -131,139 +130,76 @@
 	<!-- ============================================== -->
 	<!-- ============== Content Area ================== -->
 	<!-- ============================================== -->
+
 	<div class="container main-content mt-5 mb-5">
-		<div class="top__text">
-			Play & download all the music you want
+
+		<!-- content for playlist page -->
+
+		<div class="playlist">
+			<div class="playlist__head mb-2">
+				<button class="playlist__head--btn btn--new">new</button>
+				<button class="playlist__head--btn btn--start">start</button>
+			</div>
+			<div class="playlist__content">
+				<h2 class="heading-2 playlist__name mb-2">playlist</h2>
+				<form action="#" class="playlist__form">
+					<label for="search" class="playlist__search--icon">
+						<svg>
+							<use xlink:href="./img/icons.svg#icon-search"></use>
+						</svg>
+					</label>
+					<input type="text" name="search" placeholder="find song">
+				</form>
+			</div>
 		</div>
-		<h2 class="heading-2 section__name mt-2 mb-2">browser</h2>
-		<!-- <div class="content__header d-flex align-items-center mt-3 pb-2">
-			<h2 class="heading">Featured</h2>
-			<a href="#" class="btn btn__listen ml-5">Listen</a>
-		</div> -->
-		<div class="row">
-			<div class="col-md-12">
-				<div class="owl-carousel owl-theme slider slider1 homepage-slider1">
-					<div class="slide__item slide__item--1">
-						<p class="p__text artist__name">
-							MADE FOR SUMMER
-						</p>
-						<h3 class="heading song__title-1">Apple Music Summertime Sounds</h3>
-						<h3 class="heading song__title-2">Featured Collection for You</h3>
-						<figure class="img">
-							<img src="img/slider-1-img-1.png" alt="img" class="img-fluid" />
-						</figure>
-					</div>
-					<div class="slide__item slide__item--1">
-						<p class="p__text artist__name">
-							MADE FOR SUMMER
-						</p>
-						<h3 class="heading song__title-1">Apple Music Summertime Sounds</h3>
-						<h3 class="heading song__title-2">Featured Collection for You</h3>
-						<figure class="img">
-							<img src="img/slider-1-img-2.png" alt="img" class="img-fluid" />
-						</figure>
-					</div>
-					<div class="slide__item slide__item--1">
-						<p class="p__text artist__name">
-							MADE FOR SUMMER
-						</p>
-						<h3 class="heading song__title-1">Apple Music Summertime Sounds</h3>
-						<h3 class="heading song__title-2">Featured Collection for You</h3>
-						<figure class="img">
-							<img src="img/slider-1-img-1.png" alt="img" class="img-fluid" />
-						</figure>
+
+		<!-- content for new playlist -->
+		<div class="new-playlist">
+			<div class="new-playlist__head mb-2">
+				<button class="btn-center">cencer</button>
+				<h2 class="heading">new playlist</h2>
+				<button class="btn-done">done</button>
+			</div>
+
+			<div class="new-playlist__body">
+				<div class="new-playlist__left">
+					<svg class="new-playllist__icon icon-playlist">
+						<use xlink:href="./img/icons.svg#icon-playlist"></use>
+					</svg>
+					<div class="icon-camera">
+						<svg>
+							<use xlink:href="./img/icons.svg#icon-camera"></use>
+						</svg>
 					</div>
 				</div>
+				<div class="new-playlist__right">
+					<form action="#">
+						<label for="" class="heading-2 mb-2">playlist name</label>
+						<input type="text" class="mb-3">
+						<label for="" class="mb-2">description</label>
+						<input type="text">
+					</form>
+				</div>
+			</div>
+			<div class="new-playlist__bottom mt-4">
+				<div class="icon">
+					<svg>
+						<use xlink:href="./img/icons.svg#icon-plus"></use>
+					</svg>
+				</div>
+				<span class="text">add music</span>
 			</div>
 		</div>
+	
+    </div>
 
-		<!-- ====================================== -->
-		<!-- ======== top played songs area ========== -->
-		<!-- ====================================== -->
 
-		<h2 class="heading mt-4 mb-2">Now in Spatial Audio</h2>
-		<!-- ====================================== -->
-		<!-- this slider will be on desktop version -->
-		<!-- ====================================== -->
-		<div class="owl-carousel owl-theme slider slider3 homepage-slider3">
-			<div class="slide__item">
-				<figure class="img">
-					<img src="img/top-played1.png" alt="img" class="img-fluid" />
-					<!-- <svg>
-						<use xlink:href="./img/icons.svg#icon-pause-round"></use>
-					</svg> -->
-				</figure>
-			</div>
-			<div class="slide__item">
-				<figure class="img">
-					<img src="img/top-played2.png" alt="img" class="img-fluid" />
-					<!-- <svg>
-						<use xlink:href="./img/icons.svg#icon-pause-round"></use>
-					</svg> -->
-				</figure>
-			</div>
-			<div class="slide__item">
-				<figure class="img">
-					<img src="img/top-played3.png" alt="img" class="img-fluid" />
-					<!-- <svg>
-						<use xlink:href="./img/icons.svg#icon-pause-round"></use>
-					</svg> -->
-				</figure>
-			</div>
-			<div class="slide__item">
-				<figure class="img">
-					<img src="img/top-played4.png" alt="img" class="img-fluid" />
-					<!-- <svg>
-						<use xlink:href="./img/icons.svg#icon-pause-round"></use>
-					</svg> -->
-				</figure>
-			</div>
-			<div class="slide__item">
-				<figure class="img">
-					<img src="img/top-played5.png" alt="img" class="img-fluid" />
-					<!-- <svg>
-						<use xlink:href="./img/icons.svg#icon-pause-round"></use>
-					</svg> -->
-				</figure>
-			</div>
-			<div class="slide__item">
-				<figure class="img">
-					<img src="img/top-played6.png" alt="img" class="img-fluid" />
-					<!-- <svg>
-						<use xlink:href="./img/icons.svg#icon-pause-round"></use>
-					</svg> -->
-				</figure>
-			</div>
-			<div class="slide__item">
-				<figure class="img">
-					<img src="img/top-played7.png" alt="img" class="img-fluid" />
-					<!-- <svg>
-						<use xlink:href="./img/icons.svg#icon-pause-round"></use>
-					</svg> -->
-				</figure>
-			</div>
-			<div class="slide__item">
-				<figure class="img">
-					<img src="img/top-played2.png" alt="img" class="img-fluid" />
-					<!-- <svg>
-						<use xlink:href="./img/icons.svg#icon-pause-round"></use>
-					</svg> -->
-				</figure>
-			</div>
-			<div class="slide__item">
-				<figure class="img">
-					<img src="img/top-played1.png" alt="img" class="img-fluid" />
-					<!-- <svg>
-						<use xlink:href="./img/icons.svg#icon-pause-round"></use>
-					</svg> -->
-				</figure>
-			</div>
-		</div>
-	</div>
+	.
 
 	<!-- ====================================== -->
 	<!-- ========== currently playing ========= -->
 	<!-- ====================================== -->
+    
 	<div class="playing-wrapper">
 		<div class="container-flued">
 			<div class="row align-items-center">
@@ -278,18 +214,6 @@
 					</div>
 				</div>
 				<div class="col-8 playing-control-col">
-
-					<!-- <div class="playing__progress">
-						<p class="p__text start__time">00:00</p>
-						<div class="progress">
-							<div class="bar">
-								<div class="fill"></div>
-							</div>
-							<input type="range" min="0" max="100" value="0" step="1" id="slider" />
-						</div>
-						<p class="p__text end__time">00:00</p>
-						
-					</div> -->
 					<div class="progress">
 						<div class="bar">
 							<div class="fill"></div>
@@ -336,7 +260,8 @@
 	<script src="js/owl.carousel.min.js"></script>
 
 	<!-- Main js file -->
-	<script src="js/index.js"></script>
+	<!-- <script src="js/index.js"></script> -->
+	<script src="js/index-8.js"></script>
 </body>
 
 </html>

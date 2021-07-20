@@ -1,14 +1,10 @@
 .player {
   background: linear-gradient(to right, #88562d, #b18660);
-  //   height: 100vh;
-  // min-height: 500px;
-  // height: 100vh;
   max-height: 1200px;
   width: 100%;
 
   &__content {
     max-width: 90rem;
-    // border: 1px solid red;
     margin: 0 auto;
     text-align: center;
     padding: 5rem 0;
@@ -20,6 +16,16 @@
     width: 45rem;
     margin: 0 auto 5rem auto;
 
+    @media only screen and (max-width: $mbl-port) {
+      height: 30rem;
+    width: 30rem;
+    }
+
+    @media only screen and (max-width: $mbl-port) {
+      height: 25rem;
+    width: 25rem;
+    }
+
     img {
       height: 100%;
       width: 100%;
@@ -29,12 +35,15 @@
   &__details {
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
-    // justify-content: space-between;
     color: #fff;
     margin-bottom: 5rem;
     align-items: flex-end;
     padding: 0 5rem;
     grid-column-gap: 2rem;
+    @media only screen and (max-width: $mbl-land) {
+      grid-template-columns: 1fr min-content;
+      align-items: center;
+    }
   }
 
   &__left {
@@ -68,12 +77,15 @@
     .heading-5 {
       margin-bottom: -0.5rem;
     }
+    
   }
 
   &__right {
-    // border-bottom: 5px solid red;
     width: 100%;
     text-align: right;
+    @media only screen and (max-width: $mbl-land) {
+      display: none;
+    }
 
     &::after {
       content: "";
@@ -114,19 +126,21 @@
   }
 
   &__progress--container {
-    // border: 1px solid red;
     display: grid;
     grid-template-columns: min-content 1fr min-content;
     align-items: center;
+
+    @media only screen and (max-width: $laptop-port) {
+      padding: 0 2rem;
+    }
   }
 
   .progress {
-    // width: 100%;
   }
 
   &__prev,
   &__next {
-    svg{
+    svg {
       height: 2.5rem;
       width: 2.5rem;
       fill: #fff;
@@ -140,6 +154,10 @@
     display: grid;
     grid-template-columns: min-content 1fr;
     padding: 6rem;
+
+    @media only screen and (max-width: $laptop-land) {
+      padding: 4rem 2rem;
+    }
 
     &--left {
       svg {

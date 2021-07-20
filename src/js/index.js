@@ -79,6 +79,7 @@ dropBtn.forEach((el) => {
   });
 });
 
+/*
 // show playlis and settings
 const allplaylist = document.querySelector(".dropdown__item--1");
 
@@ -100,3 +101,16 @@ function showDark(){
   // body.classList.add("overlay");
   // console.log(e.target);
 }
+*/
+
+// const openSidebarBtn = document.querySelector('.bar')
+// openSidebarBtn.addEventListener('click', ()=>{
+//   sidebar()
+// })
+
+function sidebar (){
+  const mobileMenu = document.querySelector('body')
+  mobileMenu.classList.toggle('show-nav')
+  console.log(mobileMenu);
+}
+

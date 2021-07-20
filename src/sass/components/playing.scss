@@ -2,24 +2,24 @@
   position: fixed;
   right: 0;
   bottom: 0;
-  width: 83%;
+  width: calc(100% - 300px);
   height: 10rem;
   padding: 2rem 5rem;
   background: transparent;
   // filter: blur(8px);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  z-index: 9;
+  z-index: 50;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
     rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
     rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 
-	@media only screen and (max-width: 1350px){
-		width: 100%;
-	}
-	// @media only screen and (max-width: $tab-port){
-	// 	width: ;
-	// }
+  @media only screen and (max-width: 1500px) {
+    width: 100%;
+  }
+  // @media only screen and (max-width: $tab-port){
+  // 	width: ;
+  // }
 
   .container {
     @media only screen and (max-width: 1350px) {
@@ -132,18 +132,24 @@
 /* =====================================  */
 .progress {
   position: relative;
-//   width: 100%;
-//   max-width: 50rem;
+  width: 100%;
+  max-width: 80rem;
   height: 5px;
   overflow: visible;
   margin: 2rem;
 
+  @media only screen and (max-width: 900px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: $mbl-small) {
+    width: 85%;
+  }
   @media only screen and (max-width: $tab-port) {
     max-width: 900px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // margin: 0;
   }
 }
 #slider {

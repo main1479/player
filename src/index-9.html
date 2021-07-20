@@ -18,6 +18,24 @@
 </head>
 
 <body class="artist-page">
+
+		<!-- ========================================== -->
+	<!-- =============== mobie menu =============== -->
+	<!-- ========================================== -->
+	<div class="mobile-menu">
+		<div class="start-sidebar bar" onclick="sidebar()">
+			<svg>
+				<use xlink:href="./img/icons.svg#icon-bars"></use>
+			</svg>
+		</div>
+
+		<div class="close-sidebar bar" onclick="sidebar()">
+			<svg>
+				<use xlink:href="./img/icons.svg#icon-close"></use>
+			</svg>
+		</div>
+	</div>
+
 	<!-- ========================================== -->
 	<!-- =============== sidebar ================== -->
 	<!-- ========================================== -->
@@ -133,13 +151,13 @@
 				</button>
 
 			</div>
-			<div class="row text-center text-lg-left mt-3">
-				<div class="col-lg-5 mb-2">
+			<div class="row text-lg-left mt-3">
+				<div class="col-lg-5 col-md-5 col-sm-5 mb-2">
 					<figure class="img artist__image">
 						<img src="img/artist.png" class="img-fluid" alt="img" />
 					</figure>
 				</div>
-				<div class="col-lg-5 mb-2 mt-5">
+				<div class="col-lg-6 col-md-6 col-sm-7 mb-2 mt-5">
 					<div class="artist__details">
 
 						<h2 class="heading artist__name black mb-1">The Plug</h2>
@@ -173,7 +191,6 @@
 		<!-- ====================================== -->
 		<!-- ======== Latest songs area ========== -->
 		<!-- ====================================== -->
-		<!-- <h2 class="heading mt-4 mb-2">Latest</h2> -->
 		<ul class="song__list mb-5 mt-5">
 			<li class="song__list-item">
 				<figure class="img">
@@ -429,6 +446,7 @@
 			</li>
 		</ul>
 	</div>
+
 	<!-- ====================================== -->
 	<!-- ========== currently playing ========= -->
 	<!-- ====================================== -->
@@ -498,8 +516,14 @@
 	<script src="js/owl.carousel.min.js"></script>
 
 	<!-- Main js file -->
-	<!-- <script src="js/artist.js"></script> -->
 	<script src="js/index-9.js"></script>
+	<!-- <script src="js/index.js"></script> -->
 </body>
 
 </html>
+
+<!-- 
+	git add .
+	git commit -m ''
+	git push
+ -->

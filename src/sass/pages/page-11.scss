@@ -1,11 +1,12 @@
 .music-list {
   max-height: 97rem;
   max-width: 97rem;
-  height: 75rem;
-  width: 97rem;
+  height: 80%;
+  width: 80%;
   position: fixed;
-  top: 3rem;
-  left: 20%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #fff;
   z-index: 12;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

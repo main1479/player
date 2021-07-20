@@ -1,60 +1,63 @@
-.dark {
-  .sidebar {
-    background-color: #cecece;
-    border-right: 1px solid #e7e7e7;
+// .dark {
+//   .sidebar {
+//     background-color: #cecece;
+//     border-right: 1px solid #e7e7e7;
 
-    svg {
-      fill: #80827e;
-    }
-  }
+//     svg {
+//       fill: #80827e;
+//     }
+//   }
 
-  .allplaylist {
-    display: block;
-  }
+//   .allplaylist {
+//     display: block;
+//   }
 
-  .sidebar .nav__link.active,
-  .sidebar .nav__link:hover {
-    opacity: 1;
-    background-color: #707070;
-    color: #fff;
-  }
+//   .sidebar .nav__link.active,
+//   .sidebar .nav__link:hover {
+//     opacity: 1;
+//     background-color: #707070;
+//     color: #fff;
+//   }
 
-  .sidebar__head {
-    color: #80827e;
+//   .sidebar__head {
+//     color: #80827e;
 
-    .sidebar__head--left {
-      svg {
-        fill: #80827e;
-      }
-    }
-  }
+//     .sidebar__head--left {
+//       svg {
+//         fill: #80827e;
+//       }
+//     }
+//   }
 
-  .allplaylist__settings {
-    display: block;
-  }
+//   .allplaylist__settings {
+//     display: block;
+//   }
 
-  .new-playlist{
-    display: block;
-  }
-}
-
-// .overlay{
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   height: 100%;
-//   width: 100%;
-//   background-color: red;
-//   z-index: 12;
+//   .new-playlist {
+//     display: block;
+//   }
 // }
 
 .allplaylist {
   position: fixed;
-  top: 15rem;
-  left: 30rem;
+  top: 20%;
+  left: 15%;
   z-index: 11;
-  display: none;
+  // display: none;
   transition: all 0.5s;
+
+  @media only screen and (max-width: $laptop-land) {
+    top: 10%;
+    left: 30%;
+  }
+  @media only screen and (max-width: $mbl-port) {
+    top: 10%;
+    left: 15%;
+  }
+  @media only screen and (max-width: $mbl-small) {
+    top: 10%;
+    left: 8%;
+  }
 
   &__body {
     display: flex;
@@ -74,6 +77,14 @@
     padding: 16rem;
     border-radius: 1rem;
 
+    @media only screen and (max-width: $laptop-land) {
+      padding: 10rem;
+    }
+
+    @media only screen and (max-width: $mbl-small) {
+      padding: 7rem;
+    }
+
     svg {
       height: 6rem;
       width: 6rem;
@@ -85,14 +96,28 @@
 .allplaylist__settings {
   background-color: #fcfcfc;
   height: auto;
-  width: 30rem;
+  max-width: 30rem;
   padding: 1.5rem 0;
   border-radius: 1rem;
   position: fixed;
-  top: 18rem;
-  left: 75rem;
+  top: 22%;
+  left: 41%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-  display: none;
+  z-index: 12;
+
+  @media only screen and (max-width: $laptop-land) {
+    top: 50%;
+    left: 30%;
+  }
+  @media only screen and (max-width: $mbl-port) {
+    top: 50%;
+    left: 15%;
+  }
+  @media only screen and (max-width: $mbl-small) {
+    top: 45%;
+    left: 8%;
+    width: 90%;
+  }
 }
 
 .allplaylist__list {
@@ -143,15 +168,16 @@
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   max-height: 84rem;
+  max-width: 88rem;
   height: 80%;
-  width: 80rem;
+  width: 80%;
   position: fixed;
-  top: 45%;
-  left: 45%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   padding: 3rem;
   z-index: 12;
-  display: none;
+  // display: none;
 
   &__head {
     display: flex;
@@ -163,9 +189,10 @@
       background-color: transparent;
       color: $color-primary;
       text-transform: capitalize;
-      transition: all .3s;
+      transition: all 0.3s;
 
-      &:hover, &:active{
+      &:hover,
+      &:active {
         color: #000;
       }
     }
@@ -177,23 +204,49 @@
   &__body {
     display: grid;
     grid-template-columns: 33rem 1fr;
-    grid-column-gap: 4rem;
+    grid-gap: 4rem;
     align-items: center;
     border-bottom: 1px solid $color-dark;
     padding-bottom: 4rem;
+    overflow: hidden;
+
+    @media only screen and (max-width: $laptop-port) {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    @media only screen and (max-width: $mbl-small) {
+      justify-items: center;
+    }
   }
 
   &__left {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     height: 33rem;
+    max-width: 33rem;
     width: 100%;
     background-color: #eee;
     position: relative;
-    svg{
+
+    @media only screen and (max-width: $laptop-port) {
+      grid-column: 1 / -1;
+      height: 23rem;
+      width: 40%;
+      min-width: 23rem;
+      justify-self: center;
+    }
+    @media only screen and (max-width: $mbl-port) {
+      height: 16rem;
+      min-width: 16rem;
+      justify-self: center;
+    }
+
+    svg {
       height: 3rem;
       width: 3rem;
     }
-    .icon-playlist{
+    .icon-playlist {
       height: 15rem;
       width: 15rem;
       position: absolute;
@@ -202,9 +255,17 @@
       transform: translate(-50%, -50%);
       opacity: 0.5;
       fill: rgb(153, 153, 153);
+      @media only screen and (max-width: $laptop-port) {
+        height: 12rem;
+        width: 12rem;
+      }
+      @media only screen and (max-width: $mbl-port) {
+        height: 6rem;
+        width: 6rem;
+      }
     }
 
-    .icon-camera{
+    .icon-camera {
       // height: 5rem;
       // width: 5rem;
       position: absolute;
@@ -212,9 +273,18 @@
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: $color-dark;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
       padding: 3.5rem;
       border-radius: 50%;
+
+      @media only screen and (max-width: $laptop-port) {
+        padding: 1.5rem;
+      }
+
+      @media only screen and (max-width: $mbl-port) {
+        padding: 1rem;
+      }
     }
   }
 
@@ -223,35 +293,38 @@
   // }
 
   &__right {
-    
-    form{
-
+    width: 100%;
+    @media only screen and (max-width: $laptop-port) {
+      grid-column: 1 / -1;
+    }
+    form {
+      width: 100%;
     }
 
-    .heading-2{
+    .heading-2 {
       font-size: 3rem;
     }
 
-    input{
+    input {
       width: 100%;
       border: none;
       border-bottom: 1px solid $color-dark;
     }
   }
 
-  &__bottom{
+  &__bottom {
     display: flex;
     grid-column-gap: 2rem;
     align-items: center;
     border-bottom: 1px solid $color-dark;
     padding-bottom: 2rem;
 
-    .icon{
+    .icon {
       background-color: green;
-      padding: 1rem  1.5rem;
+      padding: 1rem 1.5rem;
       border-radius: 50%;
     }
-    svg{
+    svg {
       height: 2rem;
       width: 2rem;
       fill: #fff;

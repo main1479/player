@@ -18,6 +18,24 @@
 </head>
 
 <body class="playlist-page">
+
+	<!-- ========================================== -->
+	<!-- =============== mobie menu =============== -->
+	<!-- ========================================== -->
+	<div class="mobile-menu">
+		<div class="start-sidebar bar" onclick="sidebar()">
+			<svg>
+				<use xlink:href="./img/icons.svg#icon-bars"></use>
+			</svg>
+		</div>
+
+		<div class="close-sidebar bar" onclick="sidebar()">
+			<svg>
+				<use xlink:href="./img/icons.svg#icon-close"></use>
+			</svg>
+		</div>
+	</div>
+
 	<!-- ========================================== -->
 	<!-- =============== sidebar ================== -->
 	<!-- ========================================== -->
@@ -146,101 +164,7 @@
 			</div>
 		</div>
 
-		<!-- content for unknon -->
-		<div class="allplaylist">
-			<div class="allplaylist__body">
-				<div class="allplaylist__items">
-					<div class="allplaylist__box">
-						<svg>
-							<use xlink:href="./img/icons.svg#icon-playlist"></use>
-						</svg>
-					</div>
-					<h2 class="heading playlist__name mt-2">Untitled Playlist</h2>
-				</div>
-			</div>
-		</div>
 
-		<div class="allplaylist__settings">
-			<ul class="allplaylist__list">
-				<li class="allplaylist__list--item line-break">
-					<span class="settings__name">play</span>
-					<svg>
-						<use xlink:href="./img/icons.svg#icon-play2"></use>
-					</svg>
-					<!-- <div class="line-break"></div> -->
-				</li>
-				<li class="allplaylist__list--item">
-					<span class="settings__name">Delete from Library</span>
-					<svg>
-						<use xlink:href="./img/icons.svg#icon-bin"></use>
-					</svg>
-				</li>
-				<li class="allplaylist__list--item">
-					<span class="settings__name">Download</span>
-					<svg>
-						<use xlink:href="./img/icons.svg#icon-download"></use>
-					</svg>
-				</li>
-				<li class="allplaylist__list--item line-break">
-					<span class="settings__name">Add to a Playlist…</span>
-					<svg>
-						<use xlink:href="./img/icons.svg#icon-playlist_add"></use>
-					</svg>
-				</li>
-				<li class="allplaylist__list--item">
-					<span class="settings__name">Love</span>
-					<svg>
-						<use xlink:href="./img/icons.svg#icon-playlist_add"></use>
-					</svg>
-				</li>
-				<li class="allplaylist__list--item">
-					<span class="settings__name">Suggest Less Like This</span>
-					<svg>
-						<use xlink:href="./img/icons.svg#icon-thumbs-down"></use>
-					</svg>
-				</li>
-			</ul>
-		</div>
-
-		<!-- content for new playlist -->
-		<div class="new-playlist">
-			<div class="new-playlist__head mb-2">
-				<button class="btn-center">cencer</button>
-				<h2 class="heading">new playlist</h2>
-				<button class="btn-done">done</button>
-			</div>
-
-			<div class="new-playlist__body">
-				<div class="new-playlist__left">
-					<svg class="new-playllist__icon icon-playlist">
-						<use xlink:href="./img/icons.svg#icon-playlist"></use>
-					</svg>
-					<div class="icon-camera">
-						<svg>
-							<use xlink:href="./img/icons.svg#icon-camera"></use>
-						</svg>
-					</div>
-					<!-- left -->
-				</div>
-				<div class="new-playlist__right">
-					<form action="#">
-						<label for="" class="heading-2 mb-2">playlist name</label>
-						<input type="text" class="mb-3">
-						<label for="" class="mb-2">description</label>
-						<input type="text">
-					</form>
-					<!-- right -->
-				</div>
-			</div>
-			<div class="new-playlist__bottom mt-4">
-				<div class="icon">
-					<svg>
-						<use xlink:href="./img/icons.svg#icon-plus"></use>
-					</svg>
-				</div>
-				<span class="text">add music</span>
-			</div>
-		</div>
 	</div>
 
 
@@ -321,7 +245,8 @@
 	<script src="js/owl.carousel.min.js"></script>
 
 	<!-- Main js file -->
-	<script src="js/index.js"></script>
+	<!-- <script src="js/index.js"></script> -->
+	<script src="js/playlist.js"></script>
 </body>
 
 </html>

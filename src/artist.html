@@ -18,6 +18,24 @@
 </head>
 
 <body class="artist-page">
+
+		<!-- ========================================== -->
+	<!-- =============== mobie menu =============== -->
+	<!-- ========================================== -->
+	<div class="mobile-menu">
+		<div class="start-sidebar bar" onclick="sidebar()">
+			<svg>
+				<use xlink:href="./img/icons.svg#icon-bars"></use>
+			</svg>
+		</div>
+
+		<div class="close-sidebar bar" onclick="sidebar()">
+			<svg>
+				<use xlink:href="./img/icons.svg#icon-close"></use>
+			</svg>
+		</div>
+	</div>
+
 	<!-- ========================================== -->
 	<!-- =============== sidebar ================== -->
 	<!-- ========================================== -->
@@ -133,13 +151,13 @@
 				</button>
 
 			</div>
-			<div class="row text-center text-lg-left mt-3">
-				<div class="col-lg-5 col-md-12 mb-2">
+			<div class="row text-lg-left mt-3">
+				<div class="col-lg-5 col-md-5 col-sm-5 mb-2">
 					<figure class="img artist__image">
 						<img src="img/artist.png" class="img-fluid" alt="img" />
 					</figure>
 				</div>
-				<div class="col-lg-5 col-md-12 mb-2 mt-5">
+				<div class="col-lg-6 col-md-6 col-sm-7 mb-2 mt-5">
 					<div class="artist__details">
 
 						<h2 class="heading artist__name black mb-1">The Plug</h2>
@@ -166,14 +184,6 @@
 						</div>
 					</div>
 				</div>
-				<!-- ========= back button ============= -->
-				<!-- <a href="./index.html" class="btn btn__back">
-					<svg>
-						<use xlink:href="./img/icons.svg#icon-chevron-left"></use>
-					</svg>
-					Back
-				</a>
-				<a href="#" class="btn btn__follow btn__follow-outer tablet-land-show">Follow</a> -->
 			</div>
 
 		</div>
@@ -181,7 +191,6 @@
 		<!-- ====================================== -->
 		<!-- ======== Latest songs area ========== -->
 		<!-- ====================================== -->
-		<!-- <h2 class="heading mt-4 mb-2">Latest</h2> -->
 		<ul class="song__list mb-5 mt-5">
 			<li class="song__list-item">
 				<figure class="img">
@@ -436,98 +445,6 @@
 
 			</li>
 		</ul>
-
-		<!-- ====================================== -->
-		<!-- ======== Popular track area ========== -->
-		<!-- ====================================== -->
-		<!-- <h2 class="heading mt-4 mb-2">Popular track</h2> -->
-		<!-- <ul class="song__list mb-5">
-			<li class="song__list-item">
-				<span class="count mr-4">1</span>
-				<figure class="img">
-					<img src="img/playing-song.png" alt="img" />
-				</figure>
-				<div class="song__info">
-					<div class="playing__icon-wrapper">
-						<p class="p__text song__length">03:25</p>
-						<span class="playing__indicator">&nbsp;</span>
-					</div>
-					<h3 class="heading song__name">Cloud 9 (Amelie Lens Remix)</h3>
-					<p class="p__text artist__name">Nika Key</p>
-				</div>
-				<button href="#" class="btn dot__menu">
-					<svg>
-						<use xlink:href="./img/icons.svg#icon-dot-menu"></use>
-					</svg>
-				</button>
-			</li>
-			<li class="song__list-item">
-				<span class="count mr-4">2</span>
-				<figure class="img">
-					<img src="img/top-played2.png" alt="img" />
-					<svg>
-						<use xlink:href="./img/icons.svg#icon-pause-round"></use>
-					</svg>
-				</figure>
-				<div class="song__info">
-					<div class="playing__icon-wrapper">
-						<p class="p__text song__length">03:25</p>
-						<span class="playing__indicator">&nbsp;</span>
-					</div>
-					<h3 class="heading song__name">Cloud 9 (Amelie Lens Remix)</h3>
-					<p class="p__text artist__name">Nika Key</p>
-				</div>
-				<button href="#" class="btn dot__menu">
-					<svg>
-						<use xlink:href="./img/icons.svg#icon-dot-menu"></use>
-					</svg>
-				</button>
-			</li>
-			<li class="song__list-item">
-				<span class="count mr-4">3</span>
-				<figure class="img">
-					<img src="img/top-played3.png" alt="img" />
-					<svg>
-						<use xlink:href="./img/icons.svg#icon-pause-round"></use>
-					</svg>
-				</figure>
-				<div class="song__info">
-					<div class="playing__icon-wrapper">
-						<p class="p__text song__length">03:25</p>
-						<span class="playing__indicator">&nbsp;</span>
-					</div>
-					<h3 class="heading song__name">Cloud 9 (Amelie Lens Remix)</h3>
-					<p class="p__text artist__name">Nika Key</p>
-				</div>
-				<button href="#" class="btn dot__menu">
-					<svg>
-						<use xlink:href="./img/icons.svg#icon-dot-menu"></use>
-					</svg>
-				</button>
-			</li>
-			<li class="song__list-item">
-				<span class="count mr-4">4</span>
-				<figure class="img">
-					<img src="img/top-played4.png" alt="img" />
-					<svg>
-						<use xlink:href="./img/icons.svg#icon-pause-round"></use>
-					</svg>
-				</figure>
-				<div class="song__info">
-					<div class="playing__icon-wrapper">
-						<p class="p__text song__length">03:25</p>
-						<span class="playing__indicator">&nbsp;</span>
-					</div>
-					<h3 class="heading song__name">Cloud 9 (Amelie Lens Remix)</h3>
-					<p class="p__text artist__name">Nika Key</p>
-				</div>
-				<button href="#" class="btn dot__menu">
-					<svg>
-						<use xlink:href="./img/icons.svg#icon-dot-menu"></use>
-					</svg>
-				</button>
-			</li>
-		</ul> -->
 	</div>
 
 	<!-- ====================================== -->
@@ -609,5 +526,4 @@
 	git add .
 	git commit -m ''
 	git push
-
  -->

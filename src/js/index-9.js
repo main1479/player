@@ -8,22 +8,23 @@ dropBtn.forEach((el) => {
     targetEl.classList.toggle("show-drop");
   });
 });
+
 /*
 // show playlis and settings
 const allplaylist = document.querySelector(".dropdown__item--1");
 
 allplaylist.addEventListener("click", function () {
-  showDark();
+  showDark()
 });
 
-const newPlaylistBtn = document.querySelector(".dropdown__item--2");
+const newPlaylistBtn = document.querySelector('.dropdown__item--2');
 // console.log(newPlaylistBtn);
-newPlaylistBtn.addEventListener("click", () => {
-  showDark();
+newPlaylistBtn.addEventListener('click', ()=>{
+  showDark()
   // console.log(e.target);
-});
+})
 
-function showDark() {
+function showDark(){
   const body = document.querySelector("body");
   body.classList.add("dark");
   body.style.background = "#cecece";
@@ -31,3 +32,14 @@ function showDark() {
   // console.log(e.target);
 }
 */
+
+// const openSidebarBtn = document.querySelector('.bar')
+// openSidebarBtn.addEventListener('click', ()=>{
+//   sidebar()
+// })
+
+function sidebar() {
+  const mobileMenu = document.querySelector("body");
+  mobileMenu.classList.toggle("show-nav");
+  console.log(mobileMenu);
+}

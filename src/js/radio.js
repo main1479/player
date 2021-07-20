@@ -5,6 +5,49 @@ function fillw() {
 }
 slider.addEventListener("input", fillw);
 
+// =========================================
+// sliders
+
+$(".homepage-slider2").owlCarousel({
+  loop: false,
+  margin: 10,
+  nav: true,
+  responsive: {
+    0: {
+      items: 1,
+      nav: false,
+    },
+    600: {
+      items: 2,
+      nav: false,
+    },
+    1000: {
+      items: 4,
+      nav: true,
+    },
+  },
+});
+
+$(".homepage-slider3").owlCarousel({
+  loop: false,
+  margin: 10,
+  nav: true,
+  responsive: {
+    0: {
+      items: 2,
+      nav: false,
+    },
+    600: {
+      items: 3,
+      nav: false,
+    },
+    1000: {
+      items: 5,
+      nav: true,
+    },
+  },
+});
+
 // create dropdown
 
 const dropBtn = document.querySelectorAll(".drop__link");
@@ -15,7 +58,6 @@ dropBtn.forEach((el) => {
     targetEl.classList.toggle("show-drop");
   });
 });
-
 
 /*
 // show playlis and settings
@@ -46,9 +88,8 @@ function showDark(){
 //   sidebar()
 // })
 
-function sidebar (){
-  const mobileMenu = document.querySelector('body')
-  mobileMenu.classList.toggle('show-nav')
+function sidebar() {
+  const mobileMenu = document.querySelector("body");
+  mobileMenu.classList.toggle("show-nav");
   console.log(mobileMenu);
 }
-
