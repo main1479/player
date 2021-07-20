@@ -1460,9 +1460,7 @@ p {
     color: #fff; }
 
 .player {
-  background: linear-gradient(to right, #88562d, #b18660);
-  max-height: 1200px;
-  width: 100%; }
+  background: linear-gradient(to right, #88562d, #b18660); }
   .player__content {
     max-width: 90rem;
     margin: 0 auto;
