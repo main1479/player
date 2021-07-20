@@ -1,13 +1,13 @@
-
 // create dropdown
 
-const dropBtn = document.querySelectorAll(".drop__link");
+const dropBtn = document.querySelectorAll('.drop__link');
 // const dropItem = document.querySelector()
 dropBtn.forEach((el) => {
-  el.addEventListener("click", () => {
-    const targetEl = el.closest(".drop__item");
-    targetEl.classList.toggle("show-drop");
-  });
+	el.addEventListener('click', (e) => {
+		e.preventDefault();
+		const targetEl = el.closest('.drop__item');
+		targetEl.classList.toggle('show-drop');
+	});
 });
 
 /*
@@ -39,8 +39,8 @@ function showDark(){
 //   sidebar()
 // })
 
-function sidebar (){
-  const mobileMenu = document.querySelector('body')
-  mobileMenu.classList.toggle('show-nav')
-  console.log(mobileMenu);
+function sidebar() {
+	const mobileMenu = document.querySelector('body');
+	mobileMenu.classList.toggle('show-nav');
+	console.log(mobileMenu);
 }
